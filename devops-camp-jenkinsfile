@@ -71,7 +71,7 @@ pipeline {
             //TODO("Lab 4 - Artifact Management"): clean local docker db image
             post {
                 always {
-                    echo "Clean local $APP_IMAGE_NAME image"
+                    echo "Clean local $DB_IMAGE_NAME image"
                     script {
                         try {
                             sh 'docker rmi $DB_IMAGE_NAME-$COMMIT_HASH:latest'
